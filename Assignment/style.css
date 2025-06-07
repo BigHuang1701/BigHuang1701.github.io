@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 40px;
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+.search-bar select {
+    border-radius: 5px 0 0 5px;
+    background-color: #f8f8f8;
+}
+
+.search-bar input {
+    flex: 1;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.info-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hotline {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.hotline i {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #333;
+}
+
+.icons i {
+    font-size: 20px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
