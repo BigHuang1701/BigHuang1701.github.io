@@ -7,9 +7,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 10px 30px;
     background-color: white;
     border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -55,14 +56,22 @@ body {
 }
 
 .hotline {
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 70%;
 }
 
 .hotline i {
     margin-right: 8px;
     font-size: 20px;
     color: #333;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
 }
 
 .icons i {
