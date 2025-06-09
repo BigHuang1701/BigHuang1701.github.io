@@ -95,14 +95,15 @@ body {
 
 .main-container {
   display: flex;
+  align-items: stretch;
 }
 
 .sidebar {
   width: 240px;
   background-color: #f4f4f4;
   padding: 20px 16px;
-  min-height: 100vh;
   box-sizing: border-box;
+  margin-left: 240px;
 }
 
 .sidebar h3 {
@@ -136,17 +137,18 @@ body {
 
 .slider {
   flex-grow: 1;
-  overflow: hidden;
   display: flex;
+  padding-right: 240px;
   align-items: flex-start;
-  justify-content: flex-start
+  box-sizing: border-box;
 }
 
 .slider img {
   width: 100%;
+  height: 100%;
   display: block;
-  max-height: 400px;
-  object-fit: cover;;
+  max-height: none;
+  object-fit: cover;
 }
 
 .commitment-bar {
