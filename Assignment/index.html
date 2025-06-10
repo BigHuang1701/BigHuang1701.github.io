@@ -32,6 +32,7 @@
         <div class="divider">Đã có tài khoản?</div>
         <button type="button" id="show-login">Đăng nhập</button>
       </form>
+    </div>
     
     <!--- Header Section --->
     <header class="top-bar">
@@ -94,6 +95,10 @@
     </div>
 
     <script>
+
+    document.querySelector('.fa-user').onclick = function() {
+        document.getElementById('auth-modal').style.display = 'flex';
+    };
         // Mở modal khi click icon user
     document.getElementById('user-icon').onclick = function() {
         document.getElementById('auth-modal').style.display = 'flex';

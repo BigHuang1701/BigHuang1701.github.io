@@ -197,7 +197,6 @@ body {
 }
 
 .modal {
-  display: none; /* Ẩn khi chưa mở */
   position: fixed;
   z-index: 1000;
   left: 0;
