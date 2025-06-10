@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Modal Auth Section -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Đăng nhập / Đăng ký</h2>
+
+    <!-- FORM ĐĂNG NHẬP -->
+      <form id="login-form">
+        <input type="text" placeholder="Tên đăng nhập" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng nhập</button>
+        <div class="divider">Hoặc</div>
+        <button type="button" id="show-register">Đăng ký</button>
+      </form>
+
+      <!-- FORM ĐĂNG KÝ -->
+      <form id="register-form" style="display: none;">
+        <input type="text" placeholder="Tên người dùng" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <input type="password" placeholder="Xác nhận mật khẩu" required>
+        <button type="submit">Đăng ký</button>
+        <div class="divider">Đã có tài khoản?</div>
+        <button type="button" id="show-login">Đăng nhập</button>
+      </form>
+    
     <!--- Header Section --->
     <header class="top-bar">
         <div class="logo">
@@ -27,7 +53,7 @@
                 <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
             </div>
             <div class="icons">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user" id="user-icon"></i>
                 <i class="fas fa-heart"><span class="badge">0</span></i>
                 <i class="fas fa-shopping-cart"><span class="badge">0</span></i>
                 <i class="fas fa-random"><span class="badge">0</span></i>
@@ -35,7 +61,7 @@
         </div>
     </header>
     
-    <!--- Body Section --->>
+    <!--- Body Section --->
     
     <div class="main-container">
         <!--Sidebar Menu-->
@@ -66,5 +92,37 @@
         <div><i class="fas fa-credit-card"></i> Trả Góp <strong>0%</strong></div>
         <div><i class="fas fa-sync-alt"></i> Bảo hành <strong>1 đổi 1</strong></div>
     </div>
+
+    <script>
+        // Mở modal khi click icon user
+    document.getElementById('user-icon').onclick = function() {
+        document.getElementById('auth-modal').style.display = 'flex';
+        document.getElementById('login-form').style.display = 'block';
+        document.getElementById('register-form').style.display = 'none';
+    };
+
+    // Đóng modal khi click dấu X
+    document.getElementById('close-modal').onclick = function() {
+        document.getElementById('auth-modal').style.display = 'none';
+    };
+
+    // Đóng modal khi click ra ngoài
+    window.onclick = function(event) {
+        const modal = document.getElementById('auth-modal');
+        if (event.target === modal) modal.style.display = 'none';
+    };
+
+    // Chuyển sang form đăng ký
+    document.getElementById('show-register').onclick = function() {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('register-form').style.display = 'block';
+    };
+
+    // Chuyển lại form đăng nhập
+    document.getElementById('show-login').onclick = function() {
+        document.getElementById('register-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+    };
+    </script>
 </body>
 </html>
