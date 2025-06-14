@@ -96,7 +96,7 @@ body {
 .category-bar {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 100;
   background-color: #000;
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -238,26 +238,35 @@ body {
 }
 
 .partner-logos {
-  padding: 0 40px;
-  margin-bottom: 30px;
+  text-align: center;
+  margin: 40px auto;
 }
 
 .partner-logos h3 {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: inline-block;
   border-bottom: 2px solid #000;
-  width: max-content;
 }
 
 .logo-row {
   display: flex;
-  gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
 }
 
 .logo-row img {
-  height: 40px;
+  height: 40px; /* hoặc dùng width nếu bạn muốn đồng đều theo chiều ngang */
+  object-fit: contain;
+  filter: grayscale(0.4);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo-row img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
 }
 
 .footer-main {
@@ -309,7 +318,7 @@ body {
 }
 
 .footer-col .logo {
-  height: 50px;
+  height: 100px;
   margin-bottom: 10px;
 }
 
