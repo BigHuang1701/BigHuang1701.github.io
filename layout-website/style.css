@@ -1,0 +1,290 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Centered Navigation */
+  header {
+    background: #fff;
+    padding: 20px 0;
+  }
+  
+  .navmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a7f2e;
+  }
+  
+  .navmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .navmenu ul li {
+    position: relative;
+  }
+  
+  .navmenu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .navmenu ul li a:hover {
+    color: #3a7f2e;
+  }
+  
+  /* Dropdown styles */
+  .navmenu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
+  }
+  
+  .navmenu ul li:hover > ul {
+    display: flex;
+  }
+  
+  .navmenu ul li ul li {
+    width: 100%;
+  }
+  
+  .navmenu ul li ul li a {
+    padding: 8px 20px;
+    white-space: nowrap;
+  }
+  
+  .navmenu ul li ul li:hover > a {
+    background: #f0f0f0;
+  }
+  
+  /* Deep dropdown styles */
+  .navmenu ul li ul li.dropdown:hover > ul {
+    display: flex;
+    top: 0;
+    left: 100%;
+  }
+
+/* GENERAL LAYOUT */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8f5;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+/* LEFT CONTENT */
+.left-content {
+    flex: 1;
+}
+
+
+.left-content h1 {
+    font-size: 2.5em;
+    color: #2f4f4f;
+    margin-bottom: 10px;
+}
+
+
+.left-content p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+
+.left-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.left-content li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+
+.left-content li i {
+    color: green;
+    margin-right: 8px;
+}
+
+
+/* BUTTON */
+.contact-button {
+    padding: 12px 24px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background-color: darkgreen;
+}
+
+
+/* RIGHT CONTENT */
+.right-content {
+    flex: 1;
+    position: relative;
+}
+
+
+.right-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  h2 {
+    text-align: center;
+    color: green;
+    margin-top: 30px;
+  }
+
+
+  h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    padding: 0 50px;
+    margin-bottom: 60px;
+  }
+
+
+  .service-box {
+    border: 1px solid #eee;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+
+  .service-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+
+  .service-box h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+
+  .service-box p {
+    color: #555;
+    font-size: 14px;
+  }
+
+
+  .newsletter {
+    background-color: #f6f6f6;
+    padding: 40px 50px;
+    text-align: center;
+  }
+
+
+  .newsletter h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+
+  .newsletter p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+
+  .newsletter input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+
+
+  .newsletter button {
+    padding: 11px 20px;
+    background-color: #126d35;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+
+  .newsletter button:hover {
+    background-color: #0f5a2c;
+  }
+

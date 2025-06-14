@@ -7,32 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Modal Auth Section -->
-    <div id="auth-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <h2>Đăng nhập / Đăng ký</h2>
-
-    <!-- FORM ĐĂNG NHẬP -->
-      <form id="login-form">
-        <input type="text" placeholder="Tên đăng nhập" required>
-        <input type="password" placeholder="Mật khẩu" required>
-        <button type="submit">Đăng nhập</button>
-        <div class="divider">Hoặc</div>
-        <button type="button" id="show-register">Đăng ký</button>
-      </form>
-
-      <!-- FORM ĐĂNG KÝ -->
-      <form id="register-form" style="display: none;">
-        <input type="text" placeholder="Tên người dùng" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Mật khẩu" required>
-        <input type="password" placeholder="Xác nhận mật khẩu" required>
-        <button type="submit">Đăng ký</button>
-        <div class="divider">Đã có tài khoản?</div>
-        <button type="button" id="show-login">Đăng nhập</button>
-      </form>
-    </div>
     
     <!--- Header Section --->
     <header class="top-bar">
@@ -54,13 +28,34 @@
                 <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
             </div>
             <div class="icons">
-                <i class="fas fa-user" id="user-icon"></i>
+                <div class="user-dropdown">
+                    <i class="fas fa-user" id="user-icon"></i>
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
+                        <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
+                    </div>
+                </div>
                 <i class="fas fa-heart"><span class="badge">0</span></i>
                 <i class="fas fa-shopping-cart"><span class="badge">0</span></i>
                 <i class="fas fa-random"><span class="badge">0</span></i>
             </div>
         </div>
     </header>
+
+    <!-- Sticky Category Navigation Bar -->
+    <nav class="category-bar">
+        <ul>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Linh Kiện PC</a></li>
+            <li><a href="#">Màn Hình</a></li>
+            <li><a href="#">Bàn Phím</a></li>
+            <li><a href="#">Chuột - Lót Chuột</a></li>
+            <li><a href="#">Tai Nghe - Loa</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Ghế - Bàn</a></li>
+            <li><a href="#">Phụ Kiện - Đồ chơi công nghệ</a></li>
+        </ul>
+    </nav>
     
     <!--- Body Section --->
     
@@ -94,40 +89,99 @@
         <div><i class="fas fa-sync-alt"></i> Bảo hành <strong>1 đổi 1</strong></div>
     </div>
 
-    <script>
+    <div class="partner-logos">
+        <h3>Đối tác</h3>
+        <div class="logo-row">
+            <img src="images/msi.png" alt="MSI">
+            <img src="images/nzxt.png" alt="NZXT">
+            <img src="images/cooler-master.png" alt="Cooler Master">
+            <img src="images/galax.png" alt="GALAX">
+            <img src="images/asus.png" alt="ASUS">
+            <img src="images/deepcool.png" alt="Deepcool">
+            <img src="images/corsair.png" alt="Corsair">
+        </div>
+    </div>
 
-    document.querySelector('.fa-user').onclick = function() {
-        document.getElementById('auth-modal').style.display = 'flex';
-    };
-        // Mở modal khi click icon user
-    document.getElementById('user-icon').onclick = function() {
-        document.getElementById('auth-modal').style.display = 'flex';
-        document.getElementById('login-form').style.display = 'block';
-        document.getElementById('register-form').style.display = 'none';
-    };
+    <!--- Footer Section --->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-col contact">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <p>TBA</p>
+      <p><i class="fas fa-phone"></i> 08627123123 / 08627654321</p>
+      <p><i class="fas fa-envelope"></i> ambatutek@ambatu.com</p>
+      <p><i class="fas fa-clock"></i> Thứ 2 - CN (9h - 18h)</p>
+      <img src="images/bocongthuong.png" alt="Đã thông báo BCT" class="bct-badge">
+    </div>
 
-    // Đóng modal khi click dấu X
-    document.getElementById('close-modal').onclick = function() {
-        document.getElementById('auth-modal').style.display = 'none';
-    };
+    <div class="footer-col">
+      <h4>Hỗ Trợ Khách Hàng</h4>
+      <ul>
+        <li><a href="#">Tìm kiếm</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Điều khoản dịch vụ</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
 
-    // Đóng modal khi click ra ngoài
-    window.onclick = function(event) {
-        const modal = document.getElementById('auth-modal');
-        if (event.target === modal) modal.style.display = 'none';
-    };
+    <div class="footer-col">
+      <h4>Chính sách</h4>
+      <ul>
+        <li><a href="#">Phương thức thanh toán</a></li>
+        <li><a href="#">Giao hàng</a></li>
+        <li><a href="#">Đổi trả</a></li>
+        <li><a href="#">Trả góp</a></li>
+        <li><a href="#">Bảo hành</a></li>
+        <li><a href="#">Bảo mật</a></li>
+        <li><a href="#">Hướng dẫn mua hàng</a></li>
+        <li><a href="#">Thu cũ đổi mới</a></li>
+      </ul>
+    </div>
 
-    // Chuyển sang form đăng ký
-    document.getElementById('show-register').onclick = function() {
-        document.getElementById('login-form').style.display = 'none';
-        document.getElementById('register-form').style.display = 'block';
-    };
+    <div class="footer-col">
+      <h4>Thanh toán</h4>
+      <div class="payment-icons">
+        <img src="images/visa.png" alt="Visa">
+        <img src="images/mastercard.png" alt="Mastercard">
+        <img src="images/jcb.png" alt="JCB">
+        <img src="images/tienmat.png" alt="Tiền mặt">
+        <img src="images/internetbanking.png" alt="Banking">
+        <img src="images/tragop.png" alt="Trả góp 0%">
+      </div>
+      <h4>Về chúng tôi</h4>
+      <p>F1GEN</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </div>
 
-    // Chuyển lại form đăng nhập
-    document.getElementById('show-login').onclick = function() {
-        document.getElementById('register-form').style.display = 'none';
-        document.getElementById('login-form').style.display = 'block';
-    };
-    </script>
+  <div class="footer-bottom">
+    <p>© 2025 - All rights reserved by F1GEN TECHNOLOGY CO., LTD. Powered by Haravan</p>
+  </div>
+</footer>
+<!--End Footer Section-->
+
+<!--- JavaScript for User Dropdown --->
+<script>
+  const userIcon = document.getElementById('user-icon');
+  const dropdown = document.getElementById('user-dropdown');
+
+  // Bật tắt dropdown khi click vào icon
+  userIcon.addEventListener('click', function (e) {
+    e.stopPropagation(); // Ngăn click lan ra ngoài
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Ẩn dropdown khi click ra ngoài
+  window.addEventListener('click', function () {
+    dropdown.style.display = 'none';
+  });
+</script>
+<!--- End JavaScript for User Dropdown --->
+
+
 </body>
 </html>
