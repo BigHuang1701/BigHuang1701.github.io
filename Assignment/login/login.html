@@ -3,93 +3,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập - Ambatutek</title>
-<style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .modal-content {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 350px;
-      max-width: 90%;
-      position: relative;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #000;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 15px;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #333;
-    }
-
-    .divider {
-      text-align: center;
-      margin: 15px 0;
-      font-weight: bold;
-      color: #666;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #aaa;
-    }
-
-    .close:hover {
-      color: #000;
-    }
-</style>
+    <link rel="stylesheet" href="login-style.css">
 </head>
 <body>
-
-    <div class="modal-content">
-    <span class="close" onclick="window.location.href='/Assignment/index.html'">&times;</span>
-    <h2>Đăng nhập</h2>
-
-    <form>
-      <input type="text" placeholder="Tên đăng nhập" required>
-      <input type="password" placeholder="Mật khẩu" required>
-      <button type="submit">Đăng nhập</button>
-      <div class="divider">Chưa có tài khoản?</div>
-      <a href="register.html">
-        <button type="button">Đăng ký</button>
-      </a>
-    </form>
-  </div>
-    
+    <div class="logo">
+        <img src="../images/logo.png" alt="AMBATUTEK Logo">
+    </div>
+    <div class="form-center">
+      <div class="modal-content">
+        <span class="close" onclick="window.location.href='/Assignment/index.html'">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form>
+          <input type="text" placeholder="Tên đăng nhập" required>
+          <input type="password" placeholder="Mật khẩu" required>
+          <button type="submit">Đăng nhập</button>
+          <div class="divider">Chưa có tài khoản?</div>
+          <a href="register.html">
+            <button type="button">Đăng ký</button>
+          </a>
+        </form>
+      </div>
+    </div>
 </body>
 </html>
