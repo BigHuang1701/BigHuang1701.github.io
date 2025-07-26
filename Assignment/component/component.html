@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh kiện PC - Ambatutek</title>
+    <link rel="stylesheet" href="component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!--- Header Section --->
+        <header class="top-bar">
+            <div class="logo">
+                <a href="/Assignment/index.html">
+                    <img src="../images/logo.png" alt="AMBATUTEK Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <select>
+                    <option>Tất cả sản phẩm</option>
+                    <option>Phụ Kiện</option>
+                </select>
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="info-icon">
+                <div class="hotline">
+                    <i class ="fas fa-phone"></i>
+                    <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
+                    <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
+                </div>
+                <div class="icons">
+                    <div class="user-dropdown">
+                        <i class="fas fa-user" id="user-icon"></i>
+                        <div class="dropdown-menu" id="user-dropdown">
+                            <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
+                            <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
+                        </div>
+                    </div>
+                    <i class="fas fa-heart"><span class="badge">0</span></i>
+                    <i class="fas fa-shopping-cart"><span class="badge">0</span></i>
+                    <i class="fas fa-random"><span class="badge">0</span></i>
+                </div>
+            </div>
+        </header>
+        <!-- Sticky Category Navigation Bar -->
+        <nav class="category-bar">
+            <ul>
+                <li><a href="#">PC</a></li>
+                <li><a href="/Assignment/component/component.html">Linh Kiện PC</a></li>
+                <li><a href="#">Màn Hình</a></li>
+                <li><a href="#">Bàn Phím</a></li>
+                <li><a href="#">Chuột - Lót Chuột</a></li>
+                <li><a href="#">Tai Nghe - Loa</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Ghế - Bàn</a></li>
+                <li><a href="#">Phụ Kiện - Đồ chơi công nghệ</a></li>
+            </ul>
+        </nav>
+        <div class="breadcrumb">Trang chủ / <span>VGA - Card màn hình</span></div>
+
+        <div class="category-page">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>LOẠI SẢN PHẨM</h2>
+            <label><input type="checkbox"> VGA - Card màn hình</label>
+
+            <h2>THƯƠNG HIỆU</h2>
+            <label><input type="checkbox"> Asus</label>
+            <label><input type="checkbox"> Galax</label>
+            <label><input type="checkbox"> MSI</label>
+            <label><input type="checkbox"> Gigabyte</label>
+            <a href="#">Xem thêm</a>
+
+            <h2>GIÁ SẢN PHẨM</h2>
+            <input type="range" min="0" max="20000000" value="0" class="price-range">
+            <div>0₫ - 20,000,000₫</div>
+        </aside>
+
+        <!-- Main Product Content -->
+        <main class="product-list-section">
+                <div class="section-header">
+                    <h1>VGA - Card màn hình</h1>
+                    <div class="sort">
+                        <label for="sort">Sắp xếp theo: </label>
+                        <select id="sort">
+                        <option>Mới nhất</option>
+                        <option>Giá thấp đến cao</option>
+                        <option>Giá cao đến thấp</option>
+                        </select>
+                    </div>
+                </div>
+
+            <div class="product-grid">
+                <!-- Card sản phẩm -->
+                <div class="product-card">
+                    <img src="../images/vga-gigabyte-4060.png" alt="VGA Product">
+                    <p class="name">Card màn hình Gigabyte RTX 4060 GAMING OC-8GD</p>
+                    <div class="product-price">
+                        <span class="old-price">1.000.000₫</span>
+                        <span class="discount">-20%</span>
+                    </div>
+                    <p class="price">9,899,000đ</p>
+                    <div class="icons">
+                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>  
+                
+                <div class="product-card">
+                    <img src="../images/colorful-geforce-rtx5060-8gb.png" alt="VGA Product">
+                    <p class="name">Card màn hình Colorful Geforce RTX 5060 NB EX 8GB-V</p>
+                    <div class="product-price">
+                        <span class="old-price">10,990,000đ</span>
+                        <span class="discount">-6%</span>
+                    </div>
+                    <p class="price">10,290,000đ</p>
+                    <div class="icons">
+                        <i class="fas fa-shopping-bag"></i>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div> 
+            </div>
+    </div>
+    <!--- Footer Section --->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-col contact">
+                <img src="../images/logo.png" alt="Logo" class="logo">
+                <p>TBA</p>
+                <p><i class="fas fa-phone"></i> 08627123123 / 08627654321</p>
+                <p><i class="fas fa-envelope"></i> ambatutek@ambatu.com</p>
+                <p><i class="fas fa-clock"></i> Thứ 2 - CN (9h - 18h)</p>
+                <img src="../images/bocongthuong.png" alt="Đã thông báo BCT" class="bct-badge">
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ Trợ Khách Hàng</h4>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Chính sách</h4>
+                <ul>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Giao hàng</a></li>
+                    <li><a href="#">Đổi trả</a></li>
+                    <li><a href="#">Trả góp</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Bảo mật</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Thu cũ đổi mới</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Thanh toán</h4>
+                <div class="payment-icons">
+                    <img src="../images/visa.png" alt="Visa">
+                    <img src="../images/mastercard.png" alt="Mastercard">
+                    <img src="../images/jcb.png" alt="JCB">
+                    <img src="../images/tienmat.png" alt="Tiền mặt">
+                    <img src="../images/internetbanking.png" alt="Banking">
+                    <img src="../images/tragop.png" alt="Trả góp 0%">
+                </div>
+                <h4>Về chúng tôi</h4>
+                <p>F1GEN</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 - All rights reserved by F1GEN TECHNOLOGY CO., LTD. Powered by Haravan</p>
+        </div>
+    </footer>
+    <!--End Footer Section-->
+
+    <!--- JavaScript for User Dropdown --->
+    <script src="../javascript.js"></script>
+</body>
+</html>
