@@ -40,7 +40,9 @@
                         </div>
                     </div>
                     <i class="fas fa-heart"><span class="badge">0</span></i>
-                    <i class="fas fa-shopping-cart"><span class="badge">0</span></i>
+                    <i class="fas fa-shopping-cart" id="cart-icon">
+                        <span class="badge" id="cart-badge">0</span>
+                    </i>
                     <i class="fas fa-random"><span class="badge">0</span></i>
                 </div>
             </div>
@@ -64,19 +66,25 @@
         <div class="category-page">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>LOẠI SẢN PHẨM</h2>
+            <h2>
+            LOẠI SẢN PHẨM
             <label><input type="checkbox"> VGA - Card màn hình</label>
+            </h2>
 
-            <h2>THƯƠNG HIỆU</h2>
+            <h2>
+            THƯƠNG HIỆU
             <label><input type="checkbox"> Asus</label>
             <label><input type="checkbox"> Galax</label>
             <label><input type="checkbox"> MSI</label>
             <label><input type="checkbox"> Gigabyte</label>
             <a href="#">Xem thêm</a>
+            </h2>
 
-            <h2>GIÁ SẢN PHẨM</h2>
+            <h2>
+            GIÁ SẢN PHẨM
             <input type="range" min="0" max="20000000" value="0" class="price-range">
             <div>0₫ - 20,000,000₫</div>
+            </h2>
         </aside>
 
         <!-- Main Product Content -->
@@ -104,7 +112,11 @@
                     </div>
                     <p class="price">9,899,000đ</p>
                     <div class="icons">
-                        <i class="fas fa-shopping-bag"></i>
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
                         <i class="fas fa-search"></i>
                         <i class="fas fa-heart"></i>
                     </div>
@@ -119,7 +131,11 @@
                     </div>
                     <p class="price">10,290,000đ</p>
                     <div class="icons">
-                        <i class="fas fa-shopping-bag"></i>
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
                         <i class="fas fa-search"></i>
                         <i class="fas fa-heart"></i>
                     </div>
@@ -188,7 +204,24 @@
     </footer>
     <!--End Footer Section-->
 
-    <!--- JavaScript for User Dropdown --->
+    <!--Cart Section-->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h3>Giỏ hàng (<span id="cart-count">0</span>)</h3>
+            <span id="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- sản phẩm sẽ thêm ở đây -->
+        </div>
+        <div class="cart-total" id="cart-total">
+            Tổng: <strong>0₫</strong>
+        </div>
+    </div>
+    <!--End Cart Section-->
+
+    <!--- JavaScript---->
+    <script src="component.js"></script>
     <script src="../javascript.js"></script>
 </body>
 </html>
