@@ -377,6 +377,32 @@ body {
   color: #f7ca18;
 }
 
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../images/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .main-container {
   display: flex;
   align-items: stretch;
@@ -657,5 +683,83 @@ body {
   background-color: #dbe8f5;
   font-size: 13px;
   border-top: 1px solid #ccc;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.contact-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #222;
+}
+.contact-divider {
+  width: 120px;
+  height: 3px;
+  background: #222;
+  margin: 0 auto 18px auto;
+  border-radius: 2px;
+}
+.contact-desc {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 32px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.contact-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  background: #e9eaeb;
+  border-radius: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+}
+.contact-form-row .contact-input {
+  margin-bottom: 0;
+}
+.contact-form-row {
+  flex-direction: row;
+  align-items: stretch;
+}
+.contact-form-row .contact-input,
+.contact-form-row .contact-textarea {
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .contact-section {
+    max-width: 100vw;
+    padding: 16px 4vw;
+  }
+  .contact-form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contact-form {
+    max-width: 100vw;
+    gap: 12px;
+  }
 }
 
