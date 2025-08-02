@@ -25,12 +25,12 @@
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
                 <button><i class="fas fa-search"></i></button>
             </div>
-            <div class="info-icon">
-                <div class="hotline">
+            <div class="hotline">
                     <i class ="fas fa-phone"></i>
                     <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
                     <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
-                </div>
+            </div>
+            <div class="info-icon">
                 <div class="icons">
                     <div class="user-dropdown">
                         <i class="fas fa-user" id="user-icon"></i>
@@ -49,17 +49,33 @@
         </header>
         <!-- Sticky Category Navigation Bar -->
         <nav class="category-bar">
-            <ul>
-                <li><a href="#">PC</a></li>
-                <li><a href="/Assignment/component/component.html">Linh Kiện PC</a></li>
-                <li><a href="#">Màn Hình</a></li>
-                <li><a href="#">Bàn Phím</a></li>
-                <li><a href="#">Chuột - Lót Chuột</a></li>
-                <li><a href="#">Tai Nghe - Loa</a></li>
-                <li><a href="#">Laptop</a></li>
-                <li><a href="#">Ghế - Bàn</a></li>
-                <li><a href="#">Phụ Kiện - Đồ chơi công nghệ</a></li>
+            <ul id="category-list" class="category-panel">
+                <li><a href="#">PC <i class="fas fa-chevron-down"></i></a></li>
+                <li class="has-dropdown">
+                    <a href="#">Linh Kiện PC <i class="fas fa-chevron-down"></i></a>
+                    <ul class="category-dropdown">
+                        <li><a href="#">Combo Linh Kiện Ưu Đãi Sốc</a></li>
+                        <li><a href="/Assignment/component/component.html">VGA - Card màn hình</a></li>
+                        <li><a href="#">Mainboard</a></li>
+                        <li><a href="#">CPU</a></li>
+                        <li><a href="#">RAM</a></li>
+                        <li><a href="#">SSD - HDD</a></li>
+                        <li><a href="#">PSU</a></li>
+                        <li><a href="#">Tản Nhiệt - Fan</a></li>
+                        <li><a href="#">CASE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Màn Hình <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Bàn Phím <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Chuột - Lót Chuột <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Tai Nghe - Loa <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Laptop <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Ghế - Bàn <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Phụ Kiện - Đồ chơi công nghệ <i class="fas fa-chevron-down"></i></a></li>
             </ul>
+            <button id="category-toggle" class="category-toggle" style="display:none;">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
         <div class="breadcrumb">Trang chủ / <span>VGA - Card màn hình</span></div>
 

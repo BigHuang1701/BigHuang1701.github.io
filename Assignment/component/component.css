@@ -166,6 +166,7 @@ html, body {
 
 .category-bar li {
   margin: 0 15px;
+  position: relative;
 }
 
 .category-bar a {
@@ -174,10 +175,65 @@ html, body {
   font-size: 14px;
   font-weight: 500;
   transition: color 0.2s;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
 }
 
 .category-bar a:hover {
   color: #f7ca18; /* màu vàng highlight */
+}
+
+/* Dropdown cho Linh Kiện PC */
+.category-bar .has-dropdown .category-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1200;
+  border-radius: 8px;
+}
+
+.category-bar .has-dropdown:hover .category-dropdown,
+.category-bar .has-dropdown:focus-within .category-dropdown {
+  display: block;
+}
+
+.category-bar .category-dropdown li {
+  padding: 10px 24px 10px 16px;
+  border-bottom: 1px solid #eee;
+  color: #222;
+  font-size: 15px;
+  background: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.category-bar .category-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.category-bar .category-dropdown li a {
+  color: #222;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  display: block;
+  padding: 0;
+}
+
+.category-bar .category-dropdown li:hover {
+  background: #f7f7f7;
+}
+
+.category-bar .category-dropdown li a:hover {
+  color: #f7ca18;
 }
 
 .breadcrumb {
@@ -530,4 +586,45 @@ html, body {
   min-width: 20px;
   text-align: center;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .category-bar {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  .category-panel {
+    position: fixed;
+    top: 60px;
+    right: -320px;
+    width: 320px;
+    max-width: 90vw;
+    height: calc(100vh - 60px);
+    background: #fff;
+    z-index: 1000;
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+    padding: 24px 16px 16px 16px;
+    overflow-y: auto;
+    border-radius: 8px 0 0 8px;
+  }
+  .category-toggle {
+    display: block !important;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1100;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+  .hotline {
+    display: none !important;
+  }
 }

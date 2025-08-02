@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - AMBATUTEK</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+<body>
+    <!--- Header Section --->
+    <header class="top-bar">
+    <div class="logo">
+        <img src="../images/logo.png" alt="AMBATUTEK Logo">
+    </div>
+    <div class="search-bar">
+        <select>
+            <option>Tất cả sản phẩm</option>
+            <option>Phụ Kiện</option>
+        </select>
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="hotline">
+            <i class ="fas fa-phone"></i>
+            <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
+            <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
+    </div>
+    <div class="info-icon">
+        <div class="icons">
+            <div class="user-dropdown">
+                <i class="fas fa-user" id="user-icon"></i>
+                <div class="dropdown-menu" id="user-dropdown">
+                    <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
+                    <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
+                </div>
+            </div>
+            <i class="fas fa-heart"><span class="badge">0</span></i>
+            <i class="fas fa-shopping-cart" id="cart-icon">
+                    <span class="badge" id="cart-badge">0</span>
+            </i>
+            <i class="fas fa-random"><span class="badge">0</span></i>
+        </div>
+    </div>
+    <button id="category-toggle" class="category-toggle" style="display:none;">
+        <i class="fas fa-bars"></i>
+    </button>
+    </header>
+    <!-- End Header Section-->
+
+    <!-- Sticky Category Navigation Bar -->
+    <nav class="category-bar">
+        <ul id="category-list" class="category-panel">
+            <li><a href="#">PC <i class="fas fa-chevron-down"></i></a></li>
+            <li class="has-dropdown">
+                <a href="#">Linh Kiện PC <i class="fas fa-chevron-down"></i></a>
+                <ul class="category-dropdown">
+                    <li><a href="#">Combo Linh Kiện Ưu Đãi Sốc</a></li>
+                    <li><a href="/Assignment/component/component.html">VGA - Card màn hình</a></li>
+                    <li><a href="#">Mainboard</a></li>
+                    <li><a href="#">CPU</a></li>
+                    <li><a href="#">RAM</a></li>
+                    <li><a href="#">SSD - HDD</a></li>
+                    <li><a href="#">PSU</a></li>
+                    <li><a href="#">Tản Nhiệt - Fan</a></li>
+                    <li><a href="#">CASE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Màn Hình <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Bàn Phím <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Chuột - Lót Chuột <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Tai Nghe - Loa <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Laptop <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Ghế - Bàn <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Phụ Kiện - Đồ chơi công nghệ <i class="fas fa-chevron-down"></i></a></li>
+        </ul>
+    </nav>
+    <!-- End Sticky Category Navigation Bar -->
+
+    <!--- Footer Section --->
+    <footer class="footer">
+    <div class="footer-main">
+        <div class="footer-col contact">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+        <p>TBA</p>
+        <p><i class="fas fa-phone"></i> 08627123123 / 08627654321</p>
+        <p><i class="fas fa-envelope"></i> ambatutek@ambatu.com</p>
+        <p><i class="fas fa-clock"></i> Thứ 2 - CN (9h - 18h)</p>
+        <img src="images/bocongthuong.png" alt="Đã thông báo BCT" class="bct-badge">
+        </div>
+
+        <div class="footer-col">
+        <h4>Hỗ Trợ Khách Hàng</h4>
+        <ul>
+            <li><a href="#">Tìm kiếm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Điều khoản dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-col">
+        <h4>Chính sách</h4>
+        <ul>
+            <li><a href="#">Phương thức thanh toán</a></li>
+            <li><a href="#">Giao hàng</a></li>
+            <li><a href="#">Đổi trả</a></li>
+            <li><a href="#">Trả góp</a></li>
+            <li><a href="#">Bảo hành</a></li>
+            <li><a href="#">Bảo mật</a></li>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Thu cũ đổi mới</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-col">
+        <h4>Thanh toán</h4>
+        <div class="payment-icons">
+            <img src="images/visa.png" alt="Visa">
+            <img src="images/mastercard.png" alt="Mastercard">
+            <img src="images/jcb.png" alt="JCB">
+            <img src="images/tienmat.png" alt="Tiền mặt">
+            <img src="images/internetbanking.png" alt="Banking">
+            <img src="images/tragop.png" alt="Trả góp 0%">
+        </div>
+        <h4>Về chúng tôi</h4>
+        <p>F1GEN</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 - All rights reserved by F1GEN TECHNOLOGY CO., LTD. Powered by Haravan</p>
+    </div>
+    </footer>
+    <!--End Footer Section-->
+</body>
+</html>

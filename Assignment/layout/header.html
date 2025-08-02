@@ -1,0 +1,39 @@
+<header class="top-bar">
+    <div class="logo">
+        <img src="images/logo.png" alt="AMBATUTEK Logo">
+    </div>
+    <div class="search-bar">
+        <select>
+            <option>Tất cả sản phẩm</option>
+            <option>Phụ Kiện</option>
+        </select>
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="info-category-row">
+        <div class="info-icon">
+            <div class="hotline">
+                <i class ="fas fa-phone"></i>
+                <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
+                <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
+            </div>
+            <div class="icons">
+                <div class="user-dropdown">
+                    <i class="fas fa-user" id="user-icon"></i>
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
+                        <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
+                    </div>
+                </div>
+                <i class="fas fa-heart"><span class="badge">0</span></i>
+                <i class="fas fa-shopping-cart" id="cart-icon">
+                        <span class="badge" id="cart-badge">0</span>
+                </i>
+                <i class="fas fa-random"><span class="badge">0</span></i>
+            </div>
+        </div>
+        <button id="category-toggle" class="category-toggle" style="display:none;">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>

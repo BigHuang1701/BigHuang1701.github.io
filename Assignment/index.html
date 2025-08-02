@@ -11,65 +11,76 @@
     
     <!--- Header Section --->
     <header class="top-bar">
-        <div class="logo">
-            <img src="images/logo.png" alt="AMBATUTEK Logo">
-        </div>
-        <div class="search-bar">
-            <select>
-                <option>Tất cả sản phẩm</option>
-                <option>Phụ Kiện</option>
-            </select>
-            <input type="text" placeholder="Tìm kiếm sản phẩm...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-        <div class="info-category-row">
-            <div class="info-icon">
-                <div class="hotline">
-                    <i class ="fas fa-phone"></i>
-                    <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
-                    <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
-                </div>
-                <div class="icons">
-                    <div class="user-dropdown">
-                        <i class="fas fa-user" id="user-icon"></i>
-                        <div class="dropdown-menu" id="user-dropdown">
-                            <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
-                            <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
-                        </div>
-                    </div>
-                    <i class="fas fa-heart"><span class="badge">0</span></i>
-                    <i class="fas fa-shopping-cart" id="cart-icon">
-                            <span class="badge" id="cart-badge">0</span>
-                    </i>
-                    <i class="fas fa-random"><span class="badge">0</span></i>
+    <div class="logo">
+        <img src="images/logo.png" alt="AMBATUTEK Logo">
+    </div>
+    <div class="search-bar">
+        <select>
+            <option>Tất cả sản phẩm</option>
+            <option>Phụ Kiện</option>
+        </select>
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="hotline">
+            <i class ="fas fa-phone"></i>
+            <span>Hotline: Sale / Hỗ Trợ Kỹ Thuật<br>
+            <strong>08627123123 (Sale)</strong> / <strong>08627654321 (Kỹ Thuật)</strong></span>
+    </div>
+    <div class="info-icon">
+        <div class="icons">
+            <div class="user-dropdown">
+                <i class="fas fa-user" id="user-icon"></i>
+                <div class="dropdown-menu" id="user-dropdown">
+                    <a href="/Assignment/login/login.html" id="open-login">Đăng nhập</a>
+                    <a href="/Assignment/login/register.html" id="open-register">Đăng ký</a>
                 </div>
             </div>
-            <button id="category-toggle" class="category-toggle" style="display:none;">
-                <i class="fas fa-bars"></i>
-            </button>
+            <i class="fas fa-heart"><span class="badge">0</span></i>
+            <i class="fas fa-shopping-cart" id="cart-icon">
+                    <span class="badge" id="cart-badge">0</span>
+            </i>
+            <i class="fas fa-random"><span class="badge">0</span></i>
         </div>
+    </div>
+    <button id="category-toggle" class="category-toggle" style="display:none;">
+        <i class="fas fa-bars"></i>
+    </button>
     </header>
+    <!-- End Header Section-->
 
     <!-- Sticky Category Navigation Bar -->
     <nav class="category-bar">
         <ul id="category-list" class="category-panel">
-            <li><a href="#">PC</a></li>
-            <li><a href="/Assignment/component/component.html">Linh Kiện PC</a></li>
-            <li><a href="#">Màn Hình</a></li>
-            <li><a href="#">Bàn Phím</a></li>
-            <li><a href="#">Chuột - Lót Chuột</a></li>
-            <li><a href="#">Tai Nghe - Loa</a></li>
-            <li><a href="#">Laptop</a></li>
-            <li><a href="#">Ghế - Bàn</a></li>
-            <li><a href="#">Phụ Kiện - Đồ chơi công nghệ</a></li>
+            <li><a href="#">PC <i class="fas fa-chevron-down"></i></a></li>
+            <li class="has-dropdown">
+                <a href="#">Linh Kiện PC <i class="fas fa-chevron-down"></i></a>
+                <ul class="category-dropdown">
+                    <li><a href="#">Combo Linh Kiện Ưu Đãi Sốc</a></li>
+                    <li><a href="/Assignment/component/component.html">VGA - Card màn hình</a></li>
+                    <li><a href="#">Mainboard</a></li>
+                    <li><a href="#">CPU</a></li>
+                    <li><a href="#">RAM</a></li>
+                    <li><a href="#">SSD - HDD</a></li>
+                    <li><a href="#">PSU</a></li>
+                    <li><a href="#">Tản Nhiệt - Fan</a></li>
+                    <li><a href="#">CASE</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Màn Hình <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Bàn Phím <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Chuột - Lót Chuột <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Tai Nghe - Loa <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Laptop <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Ghế - Bàn <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Phụ Kiện - Đồ chơi công nghệ <i class="fas fa-chevron-down"></i></a></li>
         </ul>
     </nav>
     
     <!--- Body Section --->
-    
-    <div class="main-container">
+    <div class="main-container" style="display: flex;">
         <!--Sidebar Menu-->
-        <aside class="sidebar">
+        <aside class="sidebar" style="flex: 0 0 220px;">
             <ul>
                 <h3><i class="fas fa-bars"></i> DANH MỤC NHÓM</h3>
                 <li><i class="fas fa-desktop"></i> PC</li>
@@ -191,7 +202,5 @@
 <!--- JavaScript for User Dropdown --->
 <script src="/Assignment/component/component.js"></script>
 <script src="javascript.js"></script>
-
-
 </body>
 </html>
