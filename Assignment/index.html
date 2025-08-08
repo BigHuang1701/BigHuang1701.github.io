@@ -51,30 +51,35 @@
 
     <!-- Sticky Category Navigation Bar -->
     <nav class="category-bar">
-        <ul id="category-list" class="category-panel">
-            <li><a href="#">PC <i class="fas fa-chevron-down"></i></a></li>
-            <li class="has-dropdown">
-                <a href="#">Linh Kiện PC <i class="fas fa-chevron-down"></i></a>
-                <ul class="category-dropdown">
-                    <li><a href="#">Combo Linh Kiện Ưu Đãi Sốc</a></li>
-                    <li><a href="/Assignment/component/component.html">VGA - Card màn hình</a></li>
-                    <li><a href="#">Mainboard</a></li>
-                    <li><a href="#">CPU</a></li>
-                    <li><a href="#">RAM</a></li>
-                    <li><a href="#">SSD - HDD</a></li>
-                    <li><a href="#">PSU</a></li>
-                    <li><a href="#">Tản Nhiệt - Fan</a></li>
-                    <li><a href="#">CASE</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Màn Hình <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Bàn Phím <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Chuột - Lót Chuột <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Tai Nghe - Loa <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Laptop <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Ghế - Bàn <i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Phụ Kiện - Đồ chơi công nghệ <i class="fas fa-chevron-down"></i></a></li>
-        </ul>
+    <div class="category-panel__overlay" id="category-panel-overlay"></div>
+    <div class="category-panel__overlay" id="category-panel-dropdown-overlay"></div>
+        <div class="category-panel" id="category-list">
+            <ul>
+                <li><a href="#">PC <i class="fas fa-chevron-down"></i></a></li>
+                <li class="has-dropdown">
+                    <a href="#">Linh Kiện PC <i class="fas fa-chevron-down"></i></a>
+                    <ul class="category-dropdown">
+                        <li><a href="#">Combo Linh Kiện Ưu Đãi Sốc</a></li>
+                        <li><a href="/Assignment/VGA/vga.html">VGA - Card màn hình</a></li>
+                        <li><a href="#">Mainboard</a></li>
+                        <li><a href="#">CPU</a></li>
+                        <li><a href="#">RAM</a></li>
+                        <li><a href="#">SSD - HDD</a></li>
+                        <li><a href="#">PSU</a></li>
+                        <li><a href="#">Tản Nhiệt - Fan</a></li>
+                        <li><a href="#">CASE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Màn Hình <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Bàn Phím <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Chuột - Lót Chuột <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Tai Nghe - Loa <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Laptop <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Ghế - Bàn <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#">Phụ Kiện - Đồ chơi công nghệ <i class="fas fa-chevron-down"></i></a></li>
+            </ul>
+        </div>
+        <div class="category-bar__overlay" id="category-bar-overlay"></div>
     </nav>
     
     <!--- Body Section --->
@@ -139,7 +144,7 @@
         <li><a href="#">Tìm kiếm</a></li>
         <li><a href="#">Giới thiệu</a></li>
         <li><a href="#">Điều khoản dịch vụ</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="contact/contact.html">Liên hệ</a></li>
       </ul>
     </div>
 

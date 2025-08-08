@@ -153,74 +153,94 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Category panel slide-in for mobile
+// --- ĐỒNG BỘ LOGIC CATEGORY PANEL, OVERLAY, DROPDOWN ---
 function handleCategoryPanel() {
-const toggleBtn = document.getElementById('category-toggle');
-const categoryPanel = document.getElementById('category-list');
-const overlay = document.getElementById('category-overlay');
-if (window.innerWidth <= 768) {
-  toggleBtn.style.display = 'block';
-  categoryPanel.classList.add('category-panel');
-  categoryPanel.style.right = '-320px';
-  overlay.style.display = 'none';
-  document.body.style.overflow = '';
-} else {
-  toggleBtn.style.display = 'none';
-  categoryPanel.classList.remove('category-panel');
-  categoryPanel.style.right = '';
-  categoryPanel.style.boxShadow = '';
-  overlay.style.display = 'none';
-  document.body.style.overflow = '';
+  const toggleBtn = document.getElementById('category-toggle');
+  const categoryPanel = document.getElementById('category-list');
+  if (window.innerWidth <= 768) {
+    toggleBtn.style.display = 'block';
+    categoryPanel.classList.add('category-panel');
+    categoryPanel.style.right = '-320px';
+  } else {
+    toggleBtn.style.display = 'none';
+    categoryPanel.classList.remove('category-panel');
+    categoryPanel.style.right = '';
+    categoryPanel.style.boxShadow = '';
+  }
 }
-}
-
 window.addEventListener('resize', handleCategoryPanel);
 window.addEventListener('DOMContentLoaded', handleCategoryPanel);
+
 document.getElementById('category-toggle').onclick = function() {
   const categoryPanel = document.getElementById('category-list');
-  const overlay = document.getElementById('category-overlay');
+  const categoryPanelOverlay = document.getElementById('category-panel-overlay');
+  const categoryPanelDropdownOverlay = document.getElementById('category-panel-dropdown-overlay');
   if (categoryPanel.style.right === '0px') {
     categoryPanel.style.right = '-320px';
     categoryPanel.style.boxShadow = '';
-    overlay.style.display = 'none';
-    categoryPanel.classList.remove('open');
-    document.body.style.overflow = '';
+    if (categoryPanelOverlay) categoryPanelOverlay.classList.remove('active');
+    if (categoryPanelDropdownOverlay) categoryPanelDropdownOverlay.classList.remove('active');
   } else {
     categoryPanel.style.right = '0px';
     categoryPanel.style.boxShadow = 'rgba(0,0,0,0.2) 0 0 16px';
-    overlay.style.display = 'block';
-    categoryPanel.classList.add('open');
-    document.body.style.overflow = 'hidden'; // Block scroll
+    if (categoryPanelOverlay) categoryPanelOverlay.classList.add('active');
+    if (categoryPanelDropdownOverlay) categoryPanelDropdownOverlay.classList.remove('active');
   }
 };
-document.getElementById('category-overlay').onclick = function() {
-  const categoryPanel = document.getElementById('category-list');
-  const overlay = document.getElementById('category-overlay');
-  categoryPanel.style.right = '-320px';
-  categoryPanel.style.boxShadow = '';
-  overlay.style.display = 'none';
-  categoryPanel.classList.remove('open');
-  document.body.style.overflow = '';
-};
 
-document.addEventListener('DOMContentLoaded', function() {
-  var linhKienPC = document.querySelector('nav.category-bar li.has-dropdown');
-  var dropdown = linhKienPC.querySelector('.category-dropdown');
-  linhKienPC.addEventListener('mouseenter', function() {
-    dropdown.style.display = 'block';
+// Đóng panel khi click vào overlay
+const categoryPanelOverlay = document.getElementById('category-panel-overlay');
+if (categoryPanelOverlay) {
+  categoryPanelOverlay.addEventListener('click', function() {
+    const categoryPanel = document.getElementById('category-list');
+    categoryPanel.style.right = '-320px';
+    categoryPanel.style.boxShadow = '';
+    categoryPanelOverlay.classList.remove('active');
   });
-  linhKienPC.addEventListener('mouseleave', function() {
-    dropdown.style.display = 'none';
-  });
-  linhKienPC.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' && e.target.getAttribute('href') === '/Assignment/component/component.html') {
-      window.location.href = '/Assignment/component/component.html';
-    }
-    // Nếu click vào mục con, chuyển hướng sang file khác nếu có
-    if (e.target.parentElement.classList.contains('category-dropdown')) {
-      // Ví dụ: chuyển hướng sang file khác
-      // window.location.href = '/Assignment/component/vga.html';
-    }
-  });
-});
+}
+
+// Dropdown Linh Kiện PC
+const categoryDropdownItem = document.querySelector('nav.category-bar li.has-dropdown');
+const categoryDropdown = categoryDropdownItem ? categoryDropdownItem.querySelector('.category-dropdown') : null;
+const categoryPanelDropdownOverlay = document.getElementById('category-panel-dropdown-overlay');
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+if (categoryDropdownItem && categoryDropdown) {
+  if (isMobile()) {
+    categoryDropdown.style.display = 'none';
+    categoryDropdownItem.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const categoryPanelOverlay = document.getElementById('category-panel-overlay');
+      if (categoryDropdown.style.display === 'block') {
+        categoryDropdown.style.display = 'none';
+        categoryDropdownItem.classList.remove('open');
+        if (categoryPanelDropdownOverlay) categoryPanelDropdownOverlay.classList.remove('active');
+        if (categoryPanelOverlay) categoryPanelOverlay.classList.add('active');
+      } else {
+        categoryDropdown.style.display = 'block';
+        categoryDropdownItem.classList.add('open');
+        if (categoryPanelDropdownOverlay) categoryPanelDropdownOverlay.classList.add('active');
+        if (categoryPanelOverlay) categoryPanelOverlay.classList.remove('active');
+      }
+    });
+    document.addEventListener('click', function(e) {
+      if (!categoryDropdownItem.contains(e.target)) {
+        categoryDropdown.style.display = 'none';
+        categoryDropdownItem.classList.remove('open');
+        if (categoryPanelDropdownOverlay) categoryPanelDropdownOverlay.classList.remove('active');
+      }
+    });
+  } else {
+    // Desktop: hover để mở dropdown
+    categoryDropdownItem.addEventListener('mouseenter', function() {
+      categoryDropdown.style.display = 'block';
+      categoryDropdownItem.classList.add('open');
+    });
+    categoryDropdownItem.addEventListener('mouseleave', function() {
+      categoryDropdown.style.display = 'none';
+      categoryDropdownItem.classList.remove('open');
+    });
+  }
+}
 

@@ -1,3 +1,148 @@
+/* --- ĐỒNG BỘ CATEGORY-PANEL, OVERLAY BLUR, DROPDOWN TỪ style.css --- */
+@media (max-width: 768px) {
+  .category-panel__overlay#category-panel-dropdown-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+  }
+  .category-panel__overlay#category-panel-dropdown-overlay.active {
+    display: block;
+  }
+  .category-panel__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+  }
+  .category-panel__overlay.active {
+    display: block;
+  }
+  .category-panel {
+    z-index: 9999 !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.2) 0 0 16px;
+    transition: right 0.3s;
+  }
+  .category-panel .has-dropdown .category-dropdown {
+    display: none;
+    position: static;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+  .category-panel .has-dropdown.open .category-dropdown {
+    display: block;
+  }
+  .category-panel .category-dropdown li {
+    padding: 12px 0 12px 32px;
+    background: none;
+    color: #000;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .category-panel .category-dropdown li:last-child {
+    border-bottom: none;
+  }
+  .category-panel .category-dropdown li a {
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+  .category-panel .category-dropdown li a:hover {
+    color: #f7ca18;
+  }
+  .category-panel ul {
+    color: #111 !important;
+    background: #fff !important;
+    text-shadow: none !important;
+    font-weight: 500;
+  }
+  .category-panel li {
+    color: #111 !important;
+    background: #fff !important;
+    text-shadow: none !important;
+    font-weight: 500;
+  }
+  .category-panel a {
+    color: #111 !important;
+    background: #fff !important;
+    text-shadow: none !important;
+    font-weight: 500;
+  }
+  .category-panel .has-dropdown > a {
+    color: #f7ca18 !important;
+  }
+  .category-bar__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1199;
+  }
+  .category-bar__overlay.active {
+    display: block;
+  }
+  .category-bar .has-dropdown .category-dropdown {
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
+  }
+  .category-bar .has-dropdown.open .category-dropdown {
+    display: block !important;
+    background: #fff !important;
+    color: #000 !important;
+    z-index: 1200;
+  }
+  .category-bar .category-dropdown li {
+    width: 100%;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    color: #000 !important;
+    background: none;
+  }
+  .category-bar .category-dropdown li:last-child {
+    border-bottom: none;
+  }
+  .category-bar .category-dropdown li a {
+    color: #000 !important;
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+}
+/* --- HẾT ĐỒNG BỘ --- */
 html, body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -147,41 +292,45 @@ html, body {
 }
 
 .category-bar {
+
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #000;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background: #fff;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  width: 100%;
 }
-
 .category-bar ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   list-style: none;
   margin: 0;
+  padding: 0 0 0 0;
+  gap: 32px;
+}
+.category-bar li {
+  margin: 0;
+  position: relative;
   padding: 0;
 }
-
-.category-bar li {
-  margin: 0 15px;
-  position: relative;
-}
-
 .category-bar a {
-  color: white;
+  color: #222;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   transition: color 0.2s;
-  padding: 8px 0;
+  padding: 12px 0;
   display: flex;
   align-items: center;
+  background: none;
 }
-
-.category-bar a:hover {
-  color: #f7ca18; /* màu vàng highlight */
+.category-bar a:hover,
+.category-bar .has-dropdown.open > a,
+.category-bar .has-dropdown > a:focus {
+  color: #f7ca18 !important;
 }
 
 /* Dropdown cho Linh Kiện PC */
