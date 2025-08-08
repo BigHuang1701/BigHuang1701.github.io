@@ -5,27 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linh kiện PC - Ambatutek</title>
         <link rel="stylesheet" href="vga.css">
-        <style>
-        @media (max-width: 768px) {
-            .category-panel__overlay#category-panel-dropdown-overlay,
-            .category-panel__overlay {
-                z-index: 9998 !important;
-            }
-            .category-panel {
-                z-index: 9999 !important;
-                position: fixed;
-                right: 0;
-                top: 0;
-                height: 100vh;
-                background: #fff;
-                box-shadow: rgba(0,0,0,0.2) 0 0 16px;
-                transition: right 0.3s;
-            }
-            .category-panel .has-dropdown .category-dropdown {
-                z-index: 10000 !important;
-            }
-        }
-        </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
@@ -182,6 +161,82 @@
                         <i class="fas fa-heart"></i>
                     </div>
                 </div> 
+
+                <div class="product-card">
+                    <img src="../images/5080-astral.jpg" alt="VGA Product">
+                    <p class="name">Card màn hình Asus ROG Astral Geforce RTX 5080 16GB White Edition</p>
+                    <div class="product-price">
+                        <span class="old-price">53,990,000đ</span>
+                        <span class="discount">-7%</span>
+                    </div>
+                    <p class="price">49,990,000đ</p>
+                    <div class="icons">
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div> 
+
+                <div class="product-card">
+                    <img src="../images/4070-asus.png" alt="VGA Product">
+                    <p class="name">Card màn hình Asus 4070 Super Evo 12GB GDDR6X</p>
+                    <div class="product-price">
+                        <span class="old-price">20,890,000đ</span>
+                        <span class="discount">-8%</span>
+                    </div>
+                    <p class="price">18,990,000đ</p>
+                    <div class="icons">
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/inno3d.jpg" alt="VGA Product">
+                    <p class="name">Card màn hình INNO3D GeForce RTX 5070 Ti X3 OC 16GB GDDR7</p>
+                    <div class="product-price">
+                        <span class="old-price">29,990,000đ</span>
+                        <span class="discount">-13%</span>
+                    </div>
+                    <p class="price">25,990,000đ</p>
+                    <div class="icons">
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/intel-arc.png" alt="VGA Product">
+                    <p class="name">Card Màn Hình SPARKLE Intel® Arc™ B580 TITAN OC</p>
+                    <div class="product-price">
+                        <span class="old-price">8,990,000đ</span>
+                        <span class="discount">-9%</span>
+                    </div>
+                    <p class="price">8,190,000đ</p>
+                    <div class="icons">
+                        <div class="add-to-cart">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div> 
             </div>
     </div>
     <!--- Footer Section --->
@@ -259,11 +314,33 @@
         <div class="cart-total" id="cart-total">
             Tổng: <strong>0₫</strong>
         </div>
+        <div class="cart-actions">
+            <button id="checkout-btn">Thanh toán</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="payment-modal">
+        <div class="payment-modal-content">
+            <span class="payment-modal-close" id="payment-modal-close">&times;</span>
+            <h2>Thanh toán</h2>
+            <div id="payment-cart-list" class="payment-cart-list" style="max-height:180px;overflow-y:auto;margin-bottom:12px;"></div>
+            <div class="payment-total" style="font-size:18px;font-weight:bold;margin-bottom:16px;">Tổng: <span id="payment-total">0₫</span></div>
+            <div class="payment-methods" style="margin-bottom:16px;">
+                <label style="font-weight:500;">Hình thức thanh toán:</label><br>
+                <select id="payment-method" style="margin-top:6px;padding:6px 12px;border-radius:5px;">
+                    <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                    <option value="bank">Chuyển khoản ngân hàng</option>
+                    <option value="momo">Ví MoMo</option>
+                </select>
+            </div>
+            <button id="payment-modal-ok">Xác nhận thanh toán</button>
+        </div>
     </div>
     <!--End Cart Section-->
 
     <!--- JavaScript---->
-    <script src="vga.js"></script>
+    <script src="../VGA/vga.js"></script>
     <script src="../javascript.js"></script>
 </body>
 </html>

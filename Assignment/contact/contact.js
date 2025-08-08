@@ -1,4 +1,44 @@
 const userIcon = document.getElementById('user-icon');
+// Hiển thị Xin chào! <tên tài khoản> nếu đã đăng nhập
+function showWelcomeUser() {
+  const infoIcon = document.querySelector('.info-icon .icons');
+  let currentUser = localStorage.getItem('currentUser');
+  const userIcon = document.getElementById('user-icon');
+  if (infoIcon && currentUser) {
+    // Xóa nếu đã có
+    let welcome = document.getElementById('welcome-user');
+    if (welcome) welcome.remove();
+    welcome = document.createElement('span');
+    welcome.id = 'welcome-user';
+    welcome.style.marginRight = '12px';
+    welcome.style.fontWeight = '500';
+    welcome.style.color = '#111';
+    welcome.textContent = 'Xin chào! ' + currentUser + ' ';
+    // Nút đăng xuất
+    let logoutBtn = document.createElement('button');
+    logoutBtn.textContent = 'Đăng xuất';
+    logoutBtn.style.marginLeft = '8px';
+    logoutBtn.style.background = '#eee';
+    logoutBtn.style.border = '1px solid #bbb';
+    logoutBtn.style.borderRadius = '4px';
+    logoutBtn.style.padding = '2px 10px';
+    logoutBtn.style.fontSize = '14px';
+    logoutBtn.style.cursor = 'pointer';
+    logoutBtn.onclick = function() {
+      localStorage.removeItem('currentUser');
+      window.location.reload();
+    };
+    welcome.appendChild(logoutBtn);
+    infoIcon.insertBefore(welcome, infoIcon.firstChild);
+    // Ẩn icon user
+    if (userIcon) userIcon.style.display = 'none';
+  } else if (userIcon) {
+    userIcon.style.display = '';
+    let welcome = document.getElementById('welcome-user');
+    if (welcome) welcome.remove();
+  }
+}
+showWelcomeUser();
 const dropdown = document.getElementById('user-dropdown');
 
 // Bật tắt dropdown khi click vào icon

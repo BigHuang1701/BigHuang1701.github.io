@@ -201,6 +201,28 @@
     <div class="cart-total" id="cart-total">
         Tổng: <strong>0₫</strong>
     </div>
+    <div class="cart-actions">
+        <button id="checkout-btn">Thanh toán</button>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="payment-modal" class="payment-modal">
+    <div class="payment-modal-content">
+        <span class="payment-modal-close" id="payment-modal-close">&times;</span>
+        <h2>Thanh toán</h2>
+        <div id="payment-cart-list" class="payment-cart-list" style="max-height:180px;overflow-y:auto;margin-bottom:12px;"></div>
+        <div class="payment-total" style="font-size:18px;font-weight:bold;margin-bottom:16px;">Tổng: <span id="payment-total">0₫</span></div>
+        <div class="payment-methods" style="margin-bottom:16px;">
+            <label style="font-weight:500;">Hình thức thanh toán:</label><br>
+            <select id="payment-method" style="margin-top:6px;padding:6px 12px;border-radius:5px;">
+                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                <option value="bank">Chuyển khoản ngân hàng</option>
+                <option value="momo">Ví MoMo</option>
+            </select>
+        </div>
+        <button id="payment-modal-ok">Xác nhận thanh toán</button>
+    </div>
 </div>
 <!--End Cart Section-->
 
